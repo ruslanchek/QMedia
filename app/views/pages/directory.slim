@@ -1,0 +1,15 @@
+- content_for :bodyClass, 'directory'
+#hat-bg
+h1 Раздел
+ul.submenu
+  li: a href="#" Тенденции
+  li: a href="#" крупным планом
+  li: a href="#" Новостройки
+  li: a href="#" Среда обитания
+  li: a href="#" Доходный дом
+  li: a href="#"
+  li: a href="#"
+.row
+  .articles-gallery
+    - 8.times
+      = render 'article'

@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Kvadroom Media
+    meta name="viewport" content="width=960px"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    meta name="viewport" content="width=1000"
+  body class="#{yield :bodyClass}"
+
+    #root
+      = render '/layouts/header'
+      = yield
+      #root_footer
+    #footer
+      = render '/layouts/footer'

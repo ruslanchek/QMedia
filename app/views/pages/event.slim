@@ -1,0 +1,135 @@
+- content_for :bodyClass, 'event'
+#hat-bg
+#left-block
+  .row.header
+    .col
+      .media-container: img src="http://lorempixel.com/#{rand(200..500)}/#{rand(200..500)}?#{rand(1..1000)}"
+    .col
+      h1 Отечественные строительные материалы 2015
+      h2 16-я Специализированная выставка
+  /.row.icon-test
+    - i = 10
+    - 50.times
+      - i+=1
+      p style="font-size: #{i}px"
+        span #{i}px
+        i.kv-tags<>
+        i.kv-eye<>
+        i.kv-chat<>
+        i.kv-view-list<>
+        i.kv-view-cards<>
+        i.kv-arrow-down<>
+        i.kv-stats<>
+  /.row.icon-test
+    - i = 10
+    - 50.times
+      - i+=1
+      p style="font-size: #{i}px"
+        span #{i}px
+        i.kv-home<>
+        i.kv-cross<>
+        i.kv-pause<>
+        i.kv-play<>
+        i.kv-edit<>
+        i.kv-search<>
+        i.kv-calend<>
+
+
+  .row.date
+    .col: .title Дата
+    .col
+      span.date с 27 по 30 января 2015 г.
+      a.button href="#"
+        i.kv-calend>
+        span Добавить в календарь
+  .row.place
+    .col: .title Место
+    .col
+      p Москва, Россия
+      p Экспоцентр на Красной Пресне
+      a.location href="#"
+        i.kv-map>
+        | Как добраться
+
+  .row.description
+    .col: .title Описание
+    .col
+      p ОСМ - крупное профессиональное событие в сфере производства стройматериалов, отражающее реалии этого сегмента российского рынка и определяющее вектор его развития.
+      ul.tags
+        i.kv-tags
+        li: a href="#" Строительство
+        li: a href="#" Недвижимость
+  .row
+    .col: .title Организаторы
+    .col
+      p Евроэкспо, ВК; Мессе Дюссельдорф Москва
+  .row.list
+    .col: .title  Тематические разделы
+    .col
+      ul
+        li Строительные материалы, конструкции
+        li Отделочные и облицовочные материалы, элементы интерьера
+        li Инженерное оборудование
+        li Оборудование для производства стройматериалов
+        li Ландшафтное строительство
+        li Строительные инструменты, приспособления, спецодежда
+        li Упаковка и транспортировка
+        li Специализированные издания и литература
+        li Кредитование, лизинг, банковские услуги
+        li Профессиональные и общественные организации
+  .row.contacts
+    .col: .title Телефоны, сайт, почта
+    .col
+      .col
+        .block
+          h3 Телефоны
+          p +7 (495) 524-55-13
+          p +7 (495) 524-55-14
+          p +7 (495) 524-55-15
+      .col
+        .block
+          h3 Сайт
+          p: a href="#" www.expostroika.ru
+        .block
+          h3 Эл. Почта
+          p: a href="#" info@expostroika.ru
+  .row.warning
+    h2 ВНИМАНИЕ!
+    p Выставка может быть отменена или перенесена на другой период.
+    p Точную информацию уточняйте у организаторов выставки.
+
+
+  .social-buttons.inline
+    a.fb href="#"
+      i.kv-soc-facebook>
+      span 0
+    a.tw href="#"
+      i.kv-soc-twitter>
+      span 0
+    a.vk href="#"
+      i.kv-soc-vk>
+      span 20
+    a.go href="#"
+      i.kv-soc-google>
+      span 20
+    a.ok href="#"
+      i.kv-soc-odnok>
+      span 20
+
+#right-block
+  .row: a.button href="#" Заявка на участие
+  .row
+    h2 Снять квартиру поблизости
+    .media-container: img src="http://lorempixel.com/#{rand(20..200)}/#{rand(20..200)}?#{rand(1..1000)}"
+    .title Снять квартиру на время этого мероприятия.
+    .price от 2000 Р
+
+
+
+.events
+  h2 Подобные события в январе
+  .events-gallery
+    - 10.times
+      = render 'pages/event'
+
+

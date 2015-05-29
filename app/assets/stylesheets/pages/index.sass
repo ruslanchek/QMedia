@@ -1,0 +1,203 @@
+body.main
+  .articles-gallery .article
+    +gallery(3 of 12)
+    +breakpoint($wider)
+      +gallery(3 of 15)
+
+  .articles-gallery.luxury .article
+    &:nth-of-type(4)~.article
+      display: none
+    +breakpoint($wider)
+      &:nth-of-type(4)~.article
+        display: block
+  @media print
+    .articles-gallery.luxury .article
+      &:nth-of-type(4)~.article
+        display: none !important
+  #root > .row
+    margin-bottom: 50px
+    >h1
+      font: bold 35px / 42px $conqueror
+      margin-bottom: 15px
+    >.left
+      +span(9)
+    >.right
+      +pie-clearfix
+      +span(last 3)
+    +breakpoint($wider)
+      >.right
+        +span(last 6)
+
+  .right > .news-block
+    width: span(3)
+    float: left
+    h1
+      font: 21px / 25px $font
+      margin-bottom: 15px
+    ul
+      li
+        &:nth-child(4)~li
+          display: none
+        +breakpoint($wider)
+          &:nth-child(4)~li
+            display: block
+        &.all
+          color: #666
+        a
+          font: 14px / 20px $font
+          border-top: 1px solid #D8D8D8
+          display: block
+          padding: 12px 0
+  .left > .article
+    position: relative
+    &:hover
+      cursor: pointer
+      h1
+        color: $orange
+    .counters
+      display: none
+    .section-label
+      position: absolute
+      bottom: 0
+      left: 0
+      border-radius: 0 5px 0 0
+    .media-container
+      text-align: center
+      position: relative
+      margin-bottom: 27px
+      font-size: 0
+      line-height: 0
+      img
+        max-width: 100%
+        display: inline-block
+    h1
+      font: bold 50px / 50px $conqueror
+      margin-bottom: 10px
+    .content
+      font: 21px / 30px $font
+      time
+        color: #999
+
+
+  // widgets on the right side of the main page
+
+  .first-block
+    width: span(3)
+    float: right
+    margin-bottom: 50px
+    .header
+      position: relative
+      color: $orange
+      font: bold 12px / 15px $font
+      text-align: center
+      margin-top: -8px
+      margin-bottom: 25px
+      span
+        padding: 0 17px
+        background: $white
+      &:before
+        content: ''
+        height: 1px
+        background: $orange
+        position: absolute
+        width: 100%
+        top: 7px
+        left: 0
+        z-index: -1
+    .citations
+      .controls
+        margin-top: 20px
+        text-align: center
+        i
+          user-select: none
+          display: inline-block
+          padding: 0 12px
+          color: #666
+          cursor: pointer
+          &:hover
+            color: $orange
+          &.disabled
+            visibility: hidden
+      .frame
+        width: 100%
+        padding: 0
+        ul.slidee
+          margin: 0
+          padding: 0
+          list-style: none
+          li
+            float: left
+            margin: 0 5px 0 0
+            padding: 0
+            width: 200px
+      .citation
+        text-align: center
+        h1
+          font: bold 21px / 25px $font
+          margin-bottom: 25px
+        .avatar
+          margin: 0 auto 10px
+          img
+            max-width: 90px
+            max-height: 200px
+            border-radius: 2px
+        .author
+          font: bold 16px / 25px $font
+          margin: 0 20px
+        .position
+          font: 13px / 15px $font
+          color: #666
+          margin: 0 20px
+    .weather
+      text-align: center
+      .weather-type
+        font-size: 90px
+        color: #7F7F7F
+      .indicators
+        font: bold 16px / 20px $font
+        margin-bottom: 25px
+      .title
+        font: 21px / 25px $font
+        margin-bottom: 5px
+      .subtitle
+        font: 16px / 20px $font
+        color: #666
+    .media
+      text-align: center
+      .media-container.video-link
+        position: relative
+        cursor: pointer
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background: rgba(0, 0, 0, 0.4)
+        &:after
+          content: '\f04b'
+          font-family: FontAwesome
+          font-size: 50px
+          color: $white
+          position: absolute
+          top: 50%
+          left: 50%
+          margin-top: -20px
+          margin-left: -20px
+          transition: .3s
+        &:hover:after
+          transform: rotate(120deg) scale(2)
+      h1
+        font: 21px / 25px $font
+      &:hover
+        cursor: pointer
+        h1
+          color: $orange
+
+
+
+
+
+
+

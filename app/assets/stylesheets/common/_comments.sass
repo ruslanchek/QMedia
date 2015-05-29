@@ -1,0 +1,85 @@
+.comments-container
+  h2
+    font: 21px / 25px $font
+    margin-bottom: 30px
+  form
+    margin-bottom: 30px
+    +pie-clearfix
+    textarea
+      outline: none
+      resize: vertical
+      font: 14px / 16px $font
+      width: 100%
+      background: #FAFAFA
+      min-height: 90px
+      border: 1px solid #C5C5C5
+      padding: 15px
+      box-sizing: border-box
+      margin-bottom: 10px
+    button[type="submit"]
+      outline: none
+      float: right
+      display: inline-block
+      font: 16px / 18px $font
+      padding: 10px 16px
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+      border-radius: 2px
+      border: none
+      background: #fafafa
+      cursor: pointer
+      &:hover
+        background: #ededed
+      &:active
+        position: relative
+        top: 1px
+  .comment
+    margin-bottom: 40px
+    +pie-clearfix
+    +nested(9)
+      &.level-1
+        margin-left: span(1)
+      &.level-2
+        margin-left: span(2)
+      &.level-3
+        margin-left: span(3)
+    .avatar
+      width: 60px
+      margin-right: 20px
+      float: left
+      box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,.2)
+      overflow: hidden
+      border-radius: 2px
+      img
+        width: 100%
+        display: block
+        position: relative
+        z-index: -1
+    .container
+      overflow: hidden
+      .author
+        font: bold 14px / 16px $font
+        display: inline
+      time
+        font: 14px / 16px $font
+        display: inline
+        color: $grey
+        padding-left: 12px
+      .content
+        margin-top: 5px
+        p
+          font: 16px / 25px $font
+          &:last-of-type
+            display: inline
+            margin-right: 12px
+        .more
+          font-size: 14px
+          cursor: pointer
+          display: inline-block
+          border-bottom: 1px dotted $border-grey
+          color: $grey
+  .all-comments
+    display: inline-block
+    font: 14px / 16px $font
+    color: #666
+    border-bottom: 1px dotted $border-grey
+    margin-bottom: 10px

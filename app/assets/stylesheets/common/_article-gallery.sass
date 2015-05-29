@@ -1,0 +1,80 @@
+.articles-gallery .article
+  cursor: pointer
+  position: relative
+  margin-bottom: 50px
+  .section-label
+    position: absolute
+    top: 200px - 22px
+    border-radius: 0 5px 0 0
+    transition: .2s
+  time
+    transition: .2s
+    position: absolute
+    top: 10px
+    left: 12px
+    font: 14px $font
+    color: $white
+  .counters
+    transition: .2s
+    position: absolute
+    top: 175px
+    color: $white
+    font: 14px / 16px $font
+    .watches, .comments
+      display: inline-block
+      margin: 0 12px
+  .media-container
+    vertical-align: middle
+    text-align: center
+    position: relative
+    width: 200px
+    height: 200px
+    margin-bottom: 22px
+    font-size: 0
+    line-height: 0
+    overflow: hidden
+    &:before, &:after
+      transition: .5s
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%)
+    &:after
+      background: rgba(0, 0, 0, 0.3)
+    img
+      max-width: 100%
+      max-height: 100%
+      display: inline-block
+  h1
+    font: 21px / 24px $font
+    margin: 10px 0
+  .content
+    p
+      font: 14px / 20px $font
+      color: #666
+  &:before
+    transition: box-shadow .5s
+    content: ''
+    z-index: -1
+    position: absolute
+    background: $white
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2)
+    border-radius: 4px
+    padding: 15px
+    width: 100%
+    height: 100%
+    top: -15px
+    left: -15px
+  &:hover
+    .section-label
+      opacity: 0
+  &:not(:hover)
+    time
+      top: 0
+    .counters
+      top: 190px
+    .counters, time, .media-container:before, .media-container:after, &:before
+      opacity: 0

@@ -1,0 +1,30 @@
+- content_for :bodyClass, 'search'
+form.main-search
+  input type="text" autofocus="autofocus"
+  button type="submit"
+h1 По запросу «москва» найдено 22 статьи
+.row
+  .left-container
+    h2 Рубрики
+    ul.menu
+      li: a href="#"
+        | Интересное
+        span 4
+      li: a href="#"
+        | Инфографика
+        span 7
+      li: a href="#"
+        | Власть
+        span 3
+      li: a href="#"
+        | Общество
+        span 2
+      li: a href="#"
+        | Советы
+        span 1
+  .right-container
+    .row
+      .articles-gallery
+        - 8.times
+          = render 'article'
+

@@ -1,0 +1,57 @@
+body.search
+  header form.main-search
+    display: none
+
+  form.main-search
+    position: relative
+    margin-bottom: 35px
+    input[type="text"]
+      border: 1px solid $border-grey
+      outline: none
+      font-size: 20px
+      line-height: 20px
+      width: 100%
+      box-sizing: border-box
+      padding: 12px 40px 13px 15px
+    button[type="submit"]
+      position: absolute
+      top: 11px
+      right: 8px
+      &:before
+        content: '\f002'
+        content: '\e600'
+        +iconic
+      border: none
+      font-size: 20px
+      background: none
+      color: #B2B2B2
+      outline: none
+      cursor: pointer
+      &:hover
+        color: $orange
+  #root > h1
+    font: bold 35px / 42px $conqueror
+    margin-bottom: 35px
+  .left-container
+    +span(3)
+    h2
+      font: 14px / 16px $font
+      color: #666
+      margin-bottom: 15px
+    ul.menu
+      li
+        font: 16px / 25px $font
+        margin-bottom: 10px
+        a
+          span
+            padding-left: 6px
+            color: #9E9E9E
+  .right-container
+    +span(last 9)
+    .articles-gallery .article
+      +gallery(3 of 9)
+    +breakpoint($wider)
+      +span(last 12)
+      .articles-gallery .article
+        +gallery(3 of 12)
+

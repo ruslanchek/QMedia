@@ -1,0 +1,39 @@
+- content_for :bodyClass, 'calendar'
+#hat-bg
+h1 Календарь событий
+#months-switcher
+  a> href="#": i.kv-arrow-left
+  span.month> Январь,
+  span.year> 2015
+  a href="#": i.kv-arrow-right
+
+#event-hat
+  ul
+    li
+      span Россия
+      ul
+        li: span Армения
+        li: span Бангладеш
+        li: span Буркино-Фасо
+        li: span Оченьдлинная страна
+        li.active: span Россия
+    li
+      span Все города
+      ul
+        li: span Омск
+        li: span Санкт-Петербург
+        li: span Нижний Новгород
+        li: span Казань
+        li: span Севастополь
+    li
+      span Выставки
+      ul
+        - 5.times
+          li: span Выставка
+  .view
+    a.grid href="#": i.kv-view-cards
+    a.string href="#": i.kv-view-list
+
+.events-gallery
+  - 10.times
+    = render 'pages/event'

@@ -1,0 +1,29 @@
+$susy: (
+  columns: 12,
+  gutters: 1,
+  column-width: 40px,
+  math: static,
+  output: float ,
+  gutter-position: outside,
+//  debug: (
+//    image: show,
+//    color: rgba(87, 200, 255, .3),
+//    output: overlay,
+//    toggle: top right,
+//  ),
+);
+
+$comments: (
+  columns: 18,
+  gutters: 1,
+  column-width: 20px,
+  math: ststic,
+  output: float,
+  gutter-position: outside,
+//  debug: (
+//    image: hide,
+//    color: rgba(87, 200, 255, .3),
+//    output: background,
+//    toggle: top right,
+//  ),
+);

@@ -1,0 +1,288 @@
+header
+  position: relative
+  &.scrolled
+    #fixed-menu-container
+      top: 0
+
+  #fader
+    position: fixed
+    width: 100%
+    height: 0
+    background: rgba(0,0,0,.5)
+    top: 0
+    left: 0
+    z-index: 10
+    transition: opacity .5s
+    opacity: 0
+    &.active
+      height: 100%
+      opacity: 1
+
+
+  >.row
+    margin-bottom: 35px
+  a.logo
+    float: left
+    font-size: 50px
+    transition: .2s
+    color: $orange
+    &:hover
+      opacity: .9
+      color: $orange
+  ul.login
+    color: $grey
+    padding-top: 20px
+    padding-left: 30px
+    float: left
+    font-size: 14px
+    li
+      display: inline-block
+      &:not(:first-of-type)
+        margin-left: 12px
+  #main-search-container
+    @media print
+      display: none
+    transition: top .2s
+    margin-top: -1px
+    width: span(12)
+    top: 0
+    left: 50%
+    margin-left: -0.5 * span(12)
+    z-index: 1000
+    position: fixed
+
+    +breakpoint($wider)
+      width: span(15)
+      margin-left: -0.5 * span(15)
+  form.main-search
+    @media print
+      display: none
+    z-index: 11
+    //transition: .2s
+    box-sizing: border-box
+    width: 100%
+    padding-right: 50px
+    position: absolute
+    top: 0
+    right: 0
+    height: 51px
+    border: 1px solid transparent
+    border-top: none
+    input[type="text"]
+      border: none
+      outline: none
+      width: 100%
+      box-sizing: border-box
+      display: block
+      font-size: 20px
+      background: #faf7ed
+      padding: 13px 45px 14px 15px
+      &::-webkit-input-placeholder
+        color: $grey
+      &::-moz-placeholder
+        color: $grey
+      &:-moz-placeholder
+        color: $grey
+      &:-ms-input-placeholder
+        color: $grey
+    button[type="submit"]
+      z-index: 1
+      line-height: 1em
+      position: absolute
+      top: 0px
+      right: 48px
+      border: none
+      padding: 13px 15px
+      @-moz-document url-prefix()
+        padding: 12px
+
+      background: none
+      &:before
+        content: '\e603'
+        +iconic
+      font-size: 22px
+      color: $light-grey
+      outline: none
+      cursor: pointer
+      &:hover
+        color: $orange
+    .open
+      line-height: 1em
+      position: absolute
+      top: 0px
+      right: 0px
+      border: none
+      padding: 13px 15px
+      user-select: none
+
+      &:before
+        content: '\e603'
+        +iconic
+      font-size: 22px
+      color: $light-grey
+      outline: none
+      cursor: pointer
+      &:hover
+        color: $orange
+    .close
+      position: absolute
+      top: 0px
+      right: 0px
+      border: none
+      border-left: 1px solid $border-grey
+      padding: 13px 14px
+      user-select: none
+
+      &:before
+        content: '\e600'
+        +iconic
+      font-size: 22px
+      color: $light-grey
+      outline: none
+      cursor: pointer
+      &:hover
+        color: $orange
+    &.active
+      ul.suggestions
+        display: block
+      &:before
+        content: ''
+        background: #faf7ed
+        height: 50px
+        width: 100%
+        position: fixed
+        top: 0
+        left: 0
+        z-index: -1
+      .open
+        opacity: 0
+      .close
+        transition: opacity 1s
+      button[type="submit"]
+        transition: right .2s, opacity 0s linear 0s
+        opacity: 1
+    &:not(.active)
+      .open
+        transition: 0s linear .2s
+      button[type="submit"]
+        transition: right .2s, z-index 0s linear .2s, opacity 0s linear .2s
+      .close
+        transition: 0s
+      button[type="submit"]
+        right: 0
+        z-index: -1
+        opacity: 0
+      border-color: transparent
+      width: 50px
+      input
+        display: none
+      .close
+        opacity: 0
+        z-index: -1
+    ul.suggestions
+      display: none
+      background: $white
+
+      li
+        padding: 0 20px
+        font: 16px/40px $font
+        user-select: none
+        &:hover, &.active
+          background: $yellow
+        >span
+          cursor: pointer
+          display: block
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          b
+            font-weight: bold
+  ul.socials
+    margin-left: 20px
+    float: left
+    padding-top: 14px
+    font-size: 22px
+    li
+      cursor: pointer
+      display: inline-block
+      margin: 0 7px
+      color: $light-grey
+      a
+        color: inherit
+      &:hover
+        color: $white
+        &.fb
+          color: $fb
+        &.tw
+          color: $tw
+        &.vk
+          color: $vk
+        &.go
+          color: $go
+        &.ok
+          color: $ok
+  ul.menu
+    li
+      display: inline-block
+      font: 21px / 25px $font
+      &:not(:first-of-type)
+        margin-left: 25px
+      &.active
+        color: $orange
+
+
+  #fixed-menu-container
+    //box-shadow: 0px 0px 30px rgba(0,0,0,.18)
+    @media print
+      display: none
+    overflow: hidden
+    position: fixed
+    z-index: 20
+    background: #faf7ed
+    width: 100%
+    min-width: span(12)
+    +breakpoint($wider)
+      min-width: span(15)
+    height: 50px
+    top: -50px
+    left: 0
+    transition: top .2s
+
+    #fixed-menu
+      position: absolute
+      top: 0
+      left: 50%
+      width: span(12)
+      margin-left: -0.5 * span(12)
+      +breakpoint($wider)
+        width: span(15)
+        margin-left: -0.5 * span(15)
+
+    ul.menu
+      li
+        font: 16px/50px $font
+        &:not(:first-of-type)
+          margin-left: 20px
+          position: relative
+          top: -3px
+        &.home
+          background: $orange
+          color: #fff
+          transition: .3s
+          font-size: 22px
+          &:hover
+            background: $orange
+          a
+            display: block
+            width: 50px
+            text-align: center
+            position: relative
+            top: -3px
+            &:hover
+              color: inherit
+
+body.mobile header
+  #main-search-container
+    position: absolute
+  form.main-search:before
+    position: absolute

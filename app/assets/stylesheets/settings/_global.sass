@@ -1,0 +1,71 @@
+@font-face
+  font-family: 'Conqueror'
+  src: url("fonts/conquerorsans-bold-webfont.eot")
+  src: url("fonts/conquerorsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/conquerorsans-bold-webfont.woff2") format("woff2"), url("fonts/conquerorsans-bold-webfont.woff") format("woff"), url("fonts/conquerorsans-bold-webfont.ttf") format("truetype")
+  font-weight: bold
+  font-style: normal
+
+
+$font: "Helvetica Neue", Helvetica, Arial, sans-serif
+$conqueror: "Conqueror", sans-serif
+$wider: 1380px
+$wide: 1000px
+$tall: 800px
+
+$light-grey: rgba(0,0,0,0.3)
+
+$border-grey: #ccc
+$orange: #FF4000
+$white: #fff
+$green: #85cc3d
+$yellow: #ffea80
+$red: #f00
+$grey: #666
+
+$fb: #466599
+$tw: #63AEEB
+$vk: #587798
+$go: #CF5D46
+$ok: #FF9100
+
+
+
++sticky-footer(190px)
+
+body
+  font-family: $font
+  color: #333
+
+@media screen
+  #root, #footer
+    padding: 0 40px
+    +container
+    +breakpoint($wider)
+      +container(15)
+
+
+@media print
+  #root, #footer
+    +container
+    +breakpoint($wider)
+      +container
+
+
+[class^="kv-"], [class*=" kv-"]
+  transform: translate(0, 0)
+  text-rendering: auto
+
+=iconic()
+  font-family: 'icomoon'
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  transform: translate(0, 0)
+  text-rendering: auto
+

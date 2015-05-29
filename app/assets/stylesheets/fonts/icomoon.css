@@ -1,0 +1,138 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-t4zf3r');
+	src:url('fonts/icomoon.svg?-t4zf3r#icomoon') format('svg'),
+        url('fonts/icomoon.eot?#iefix-t4zf3r') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-t4zf3r') format('woff'),
+		url('fonts/icomoon.ttf?-t4zf3r') format('truetype');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="kv-"], [class*=" kv-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.kv-home:before {
+	content: "\e613";
+}
+
+.kv-cross:before {
+	content: "\e600";
+}
+
+.kv-pause:before {
+	content: "\e60f";
+}
+
+.kv-play:before {
+	content: "\e610";
+}
+
+.kv-edit:before {
+	content: "\e611";
+}
+
+.kv-search:before {
+	content: "\e603";
+}
+
+.kv-arrow-left:before {
+	content: "\e601";
+}
+
+.kv-arrow-right:before {
+	content: "\e602";
+}
+
+.kv-calend:before {
+	content: "\e617";
+}
+
+.kv-soc-facebook:before {
+	content: "\e608";
+}
+
+.kv-soc-google:before {
+	content: "\e60a";
+}
+
+.kv-soc-vk:before {
+	content: "\e60b";
+}
+
+.kv-soc-twitter:before {
+	content: "\e60c";
+}
+
+.kv-soc-odnok:before {
+	content: "\e609";
+}
+
+.kv-arrow-big-left:before {
+	content: "\e604";
+}
+
+.kv-arrow-big-right:before {
+	content: "\e605";
+}
+
+.kv-soc-facebook-14:before {
+	content: "\e61b";
+}
+
+.kv-map:before {
+	content: "\e618";
+}
+
+.kv-tags:before {
+	content: "\e60e";
+}
+
+.kv-eye:before {
+	content: "\e607";
+}
+
+.kv-chat:before {
+	content: "\e606";
+}
+
+.kv-soc-facebook-small:before {
+	content: "\e61a";
+}
+
+.kv-calend-small:before {
+	content: "\e619";
+}
+
+.kv-view-list:before {
+	content: "\e614";
+}
+
+.kv-view-cards:before {
+	content: "\e615";
+}
+
+.kv-arrow-down:before {
+	content: "\e616";
+}
+
+.kv-stats:before {
+	content: "\e612";
+}
+
+.kv-logo:before {
+	content: "\e60d";
+}
+
